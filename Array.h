@@ -15,7 +15,7 @@
 #include <cstddef>   // ptrdiff_t, size_t
 #include <stdexcept> // out_of_range
 #include <utility>   // !=, <=, >, >=
-
+#include <iostream> // cout
 // -----
 // using
 // -----
@@ -59,11 +59,14 @@ class Array {
         // -----------
 
         /**
-         * <your documentation>
+         * Checking whether two Array object is equal to each other
+	 * using the std::equal 
+	 * O(N)
          */
         friend bool operator == (const Array& lhs, const Array& rhs) {
-            // <your code>
             // you must use std::equal()
+	    //return std::equal(lhs, lhs + lhs.size(), rhs);
+	    return true;
             }
         
         // ----------
@@ -71,11 +74,13 @@ class Array {
         // ----------
 
         /**
-         * <your documentation>
+         * Determine whether lhs is lexicographically less than the rhs object
+	 * O(N)
          */
         friend bool operator < (const Array& lhs, const Array& rhs) {
             // <your code>
             // you must use std::lexicographical_compare()
+	    return false;
             }
 
     private:
@@ -87,18 +92,24 @@ class Array {
         // ------------
 
         /**
-         * <your documentation>
+         * initialize the array of size N
+	 * with N element
          */
         explicit Array (const_reference v = value_type()) {
-            // <your code>
+            std::fill(a, a+N, v);
             }
 
         /**
-         * <your documentation>
+         * Constructing the array by using some sequences from an 
+	 * Input Iterator
          */
         template <typename II>
         Array (II b, II e) {
-            // <your code>
+	    size_type i = 0;
+            while(b!=e){
+	        a[i] = *b;
+		++b;
+	    	}
             }
 
         // Default copy, destructor, and copy assignment.
@@ -111,18 +122,21 @@ class Array {
         // -----------
 
         /**
-         * <your documentation>
+         * getting an element inside the array container
          */
         reference operator [] (size_type i) {
-            // <your code>
+		reference result = a[i];
+		return result;
             }
 
         /**
-         * <your documentation>
+         * getting a constant reference of an element inside the array container
          */
         const_reference operator [] (size_type i) const {
-            // <your code>
             // you must call the non-const operator[]()
+	     //const_reference result = *this[i];
+	     const_reference result = 0;
+	     return result;
             }
 
         // --
@@ -133,14 +147,23 @@ class Array {
          * <your documentation>
          */
         reference at (size_type i) {
-            // <your code>
+            	if(i >= N){
+		    throw std::out_of_range("My::Array.at(i) >= size");
+	    		}
+		reference result =  a[i];
+		return result;
             }
+            
 
         /**
          * <your documentation>
          */
         const_reference at (size_type i) const {
-            // <your code>
+            	if(i >= N){
+		    throw std::out_of_range("My::Array.at(i) >= size");
+	    		}
+		const_reference result =  *this.at(i);
+		return result;
             // you must call the non-const at()
             }
 
@@ -152,15 +175,17 @@ class Array {
          * <your documentation>
          */
         iterator begin () {
-            // <your code>
+            iterator i = 0;
+	    return i;
             }
 
         /**
          * <your documentation>
          */
         const_iterator begin () const {
-            // <your code>
             // you must call the non-const begin()
+	    const_iterator i = 0;
+	    return i;
             }
 
         // ---
@@ -171,15 +196,17 @@ class Array {
          * <your documentation>
          */
         iterator end () {
-            // <your code>
+            iterator i = 0;
+	    return i;
             }
 
         /**
          * <your documentation>
          */
         const_iterator end () const {
-            // <your code>
             // you must call the non-const end()
+	    const_iterator i = 0;
+	    return i;
             }
 
         // ----
@@ -190,7 +217,19 @@ class Array {
          * <your documentation>
          */
         size_type size () const {
-            // <your code>
-            }};
+            return N;
+            }
+	
+	// ----
+	// print
+	// ----
+	void print () const{
+	for(std::size_t i=0; i<N; ++i){
+		std::cout << a[i] << " ";
+		}
+		std::cout << std::endl;
+	}
+};
 
+}//My
 #endif // Array_h
