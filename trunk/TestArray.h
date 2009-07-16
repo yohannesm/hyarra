@@ -13,7 +13,7 @@
 
 #include <algorithm> // equal
 #include <stdexcept> // out_of_range
-
+#include <iostream> // cout
 #include "cppunit/TestFixture.h"             // TestFixture
 #include "cppunit/extensions/HelperMacros.h" // CPPUNIT_TEST, CPPUNIT_TEST_SUITE, CPPUNIT_TEST_SUITE
 
@@ -33,6 +33,7 @@ struct TestArray : CppUnit::TestFixture {
     // -----
     void test_constructor0(){
     My::Array<int, 10> x(2);
+    //std::cout << x;
     x.print();
     }
     // -----

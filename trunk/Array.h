@@ -65,8 +65,7 @@ class Array {
          */
         friend bool operator == (const Array& lhs, const Array& rhs) {
             // you must use std::equal()
-	    //return std::equal(lhs, lhs + lhs.size(), rhs);
-	    return true;
+	    return std::equal(lhs, lhs + lhs.size(), rhs);
             }
         
         // ----------
@@ -80,9 +79,23 @@ class Array {
         friend bool operator < (const Array& lhs, const Array& rhs) {
             // <your code>
             // you must use std::lexicographical_compare()
-	    return false;
+	    return std::lexicographical_compare(
+	    	lhs.begin(), lhs.end(), rhs.begin(), rhs.end()
+		);
             }
 
+        // ----------
+        // operator <<
+        // ----------
+#if 0
+	friend std::ostream operator << (std::ostream& os, const Array& rhs){
+		for(unsigned int i=0; i<rhs.size(); ++i){
+		   os << rhs[i] << " ";
+			}
+		os << std::endl;
+		return os;
+	}
+#endif
     private:
         value_type a[N];
 
@@ -108,7 +121,7 @@ class Array {
 	    size_type i = 0;
             while(b!=e){
 	        a[i] = *b;
-		++b;
+		++b; ++i;
 	    	}
             }
 
@@ -134,8 +147,7 @@ class Array {
          */
         const_reference operator [] (size_type i) const {
             // you must call the non-const operator[]()
-	     //const_reference result = *this[i];
-	     const_reference result = 0;
+	     const_reference result = *this[i];
 	     return result;
             }
 
@@ -147,7 +159,7 @@ class Array {
          * <your documentation>
          */
         reference at (size_type i) {
-            	if(i >= N){
+            	if(i >= N || i < 0){
 		    throw std::out_of_range("My::Array.at(i) >= size");
 	    		}
 		reference result =  a[i];
@@ -159,7 +171,7 @@ class Array {
          * <your documentation>
          */
         const_reference at (size_type i) const {
-            	if(i >= N){
+            	if(i >= N || i < 0){
 		    throw std::out_of_range("My::Array.at(i) >= size");
 	    		}
 		const_reference result =  *this.at(i);
@@ -175,7 +187,7 @@ class Array {
          * <your documentation>
          */
         iterator begin () {
-            iterator i = 0;
+            iterator i = a;
 	    return i;
             }
 
@@ -184,7 +196,7 @@ class Array {
          */
         const_iterator begin () const {
             // you must call the non-const begin()
-	    const_iterator i = 0;
+	    const_iterator i = *this.begin();
 	    return i;
             }
 
@@ -196,7 +208,7 @@ class Array {
          * <your documentation>
          */
         iterator end () {
-            iterator i = 0;
+            iterator i = a + N;
 	    return i;
             }
 
@@ -205,7 +217,7 @@ class Array {
          */
         const_iterator end () const {
             // you must call the non-const end()
-	    const_iterator i = 0;
+	    const_iterator i = *this.end();
 	    return i;
             }
 
@@ -214,7 +226,7 @@ class Array {
         // ----
 
         /**
-         * <your documentation>
+         * return the size of the stack allocated array
          */
         size_type size () const {
             return N;
