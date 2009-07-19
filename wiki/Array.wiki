@@ -1,0 +1,25 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+We implement an stack-allocated array object.
+
+
+==implementation==
+ ===Constructor===
+There are two constructors, one that initialize the array of size N with N element,the other that constructs the array by using some sequences from an input iterator.
+ ===operator[]===
+reference operator [] that gets an element inside the array container.
+const_reference operator [] that gets a constant reference of an element inside the array container.
+ ===at===
+reference at to get the element of the Array at the specified index.
+const_reference at to get the element of the Array at the specified index.
+ ===iterator===
+iterator begin that returns an iterator to the beginning of the Array.
+const_iterator that returns a constant  iterator to the beginning of the Array.
+iterator end that returns an iterator to the end of the Array.
+const_iterator end that returns a constant iterator to the end of the Array.
+ ===size===
+size_type size that returns the size of the stack allocated array.
+ ===print===
+It prints the array.
+         
