@@ -22,4 +22,9 @@ const_iterator end that returns a constant iterator to the end of the Array.
 size_type size that returns the size of the stack allocated array.
  ===print===
 It prints the array.
-         
+==Advantage of using this array==
+1.It is stack-allocated array. 
+2.we can use an assignment 
+3.we can use an constructor. 
+4.we can use array STL algorithm.
+Therefore, comparing to the regular array provided in c++, we can use more functions than from regular array.   
