@@ -97,16 +97,16 @@
 <a name="l00087"></a>00087         <span class="comment">// ----------</span>
 <a name="l00088"></a>00088         <span class="comment">// operator &lt;&lt;</span>
 <a name="l00089"></a>00089         <span class="comment">// ----------</span>
-<a name="l00090"></a>00090 <span class="preprocessor">#if 0</span>
-<a name="l00091"></a>00091 <span class="preprocessor"></span>        <span class="keyword">friend</span> std::ostream operator &lt;&lt; (std::ostream&amp; os, <span class="keyword">const</span> <a class="code" href="classMy_1_1Array.html">Array</a>&amp; rhs){
-<a name="l00092"></a>00092                 <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i=0; i&lt;rhs.<a class="code" href="classMy_1_1Array.html#04424819af03c90be566c2faeb0108e3">size</a>(); ++i){
-<a name="l00093"></a>00093                    os &lt;&lt; rhs[i] &lt;&lt; <span class="stringliteral">" "</span>;
-<a name="l00094"></a>00094                         }
-<a name="l00095"></a>00095                 os &lt;&lt; std::endl;
-<a name="l00096"></a>00096                 <span class="keywordflow">return</span> os;
-<a name="l00097"></a>00097         }
-<a name="l00098"></a>00098 <span class="preprocessor">#endif</span>
-<a name="l00099"></a>00099 <span class="preprocessor"></span>    <span class="keyword">private</span>:
+<a name="l00090"></a>00090 <span class="comment">/*</span>
+<a name="l00091"></a>00091 <span class="comment">        friend std::ostream operator &lt;&lt; (std::ostream&amp; os, const Array&amp; rhs){</span>
+<a name="l00092"></a>00092 <span class="comment">                for(unsigned int i=0; i&lt;rhs.size(); ++i){</span>
+<a name="l00093"></a>00093 <span class="comment">                   os &lt;&lt; rhs[i] &lt;&lt; " ";</span>
+<a name="l00094"></a>00094 <span class="comment">                        }</span>
+<a name="l00095"></a>00095 <span class="comment">                os &lt;&lt; std::endl;</span>
+<a name="l00096"></a>00096 <span class="comment">                return os;</span>
+<a name="l00097"></a>00097 <span class="comment">        }</span>
+<a name="l00098"></a>00098 <span class="comment">*/</span>
+<a name="l00099"></a>00099     <span class="keyword">private</span>:
 <a name="l00100"></a><a class="code" href="classMy_1_1Array.html#a0d6bdab4fb3cbbaf3537a2a34c6d8cd">00100</a>         <a class="code" href="classMy_1_1Array.html#f2891de0471d11b4d1574becc711d70e">value_type</a> <a class="code" href="classMy_1_1Array.html#a0d6bdab4fb3cbbaf3537a2a34c6d8cd">a</a>[N];
 <a name="l00101"></a>00101 
 <a name="l00102"></a>00102     <span class="keyword">public</span>:
@@ -180,7 +180,7 @@
 <a name="l00201"></a>00201 
 <a name="l00205"></a><a class="code" href="classMy_1_1Array.html#69f29e2e15fcb37ecf4bd0e09ed32dfe">00205</a>         <a class="code" href="classMy_1_1Array.html#dd08ea4f929ff9b5a5a1236091b13f35">const_iterator</a> <a class="code" href="classMy_1_1Array.html#8efbe6bddad5ea3a30615d731bd6edf7">begin</a> ()<span class="keyword"> const </span>{
 <a name="l00206"></a>00206             <span class="comment">// you must call the non-const begin()</span>
-<a name="l00207"></a>00207             <a class="code" href="classMy_1_1Array.html#dd08ea4f929ff9b5a5a1236091b13f35">const_iterator</a> i = *<span class="keyword">this</span>.begin();
+<a name="l00207"></a>00207             <a class="code" href="classMy_1_1Array.html#dd08ea4f929ff9b5a5a1236091b13f35">const_iterator</a> i = const_cast&lt;Array&amp;&gt;(*this).begin();
 <a name="l00208"></a>00208             <span class="keywordflow">return</span> i;
 <a name="l00209"></a>00209             }
 <a name="l00210"></a>00210 
@@ -195,7 +195,7 @@
 <a name="l00222"></a>00222 
 <a name="l00226"></a><a class="code" href="classMy_1_1Array.html#52646b17f88fa1990225cf3294272fe1">00226</a>         <a class="code" href="classMy_1_1Array.html#dd08ea4f929ff9b5a5a1236091b13f35">const_iterator</a> <a class="code" href="classMy_1_1Array.html#381882248d69a975e601e347fa3a39dc">end</a> ()<span class="keyword"> const </span>{
 <a name="l00227"></a>00227             <span class="comment">// you must call the non-const end()</span>
-<a name="l00228"></a>00228             <a class="code" href="classMy_1_1Array.html#dd08ea4f929ff9b5a5a1236091b13f35">const_iterator</a> i = *<span class="keyword">this</span>.end();
+<a name="l00228"></a>00228             <a class="code" href="classMy_1_1Array.html#dd08ea4f929ff9b5a5a1236091b13f35">const_iterator</a> i = const_cast&lt;Array&amp;&gt;(*this).end();
 <a name="l00229"></a>00229             <span class="keywordflow">return</span> i;
 <a name="l00230"></a>00230             }
 <a name="l00231"></a>00231 
@@ -220,7 +220,7 @@
 <a name="l00253"></a>00253 
 <a name="l00254"></a>00254 }<span class="comment">//My</span>
 <a name="l00255"></a>00255 <span class="preprocessor">#endif // Array_h</span>
-</pre></div><hr size="1"><address style="align: right;"><small>Generated on Sun Jul 19 17:12:16 2009 by&nbsp;
+</pre></div><hr size="1"><address style="align: right;"><small>Generated on Sun Jul 19 17:33:50 2009 by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.4.7 </small></address>
 </body>

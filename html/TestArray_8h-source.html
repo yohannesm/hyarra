@@ -248,63 +248,77 @@
 <a name="l00229"></a>00229                         <span class="keywordtype">int</span> a[] = { 1, 2, 3, 4, 5 };
 <a name="l00230"></a>00230                         <a class="code" href="classMy_1_1Array.html">My::Array&lt;int,5&gt;</a> x(a, a+5);
 <a name="l00231"></a>00231                         CPPUNIT_ASSERT(<a class="code" href="structTestArray.html#99970693418222d9e66d9e802da870a8">iteratorHelper</a>(x.<a class="code" href="classMy_1_1Array.html#8efbe6bddad5ea3a30615d731bd6edf7">begin</a>(), x.<a class="code" href="classMy_1_1Array.html#381882248d69a975e601e347fa3a39dc">end</a>(), a));
-<a name="l00232"></a>00232 
-<a name="l00233"></a>00233         }
-<a name="l00234"></a><a class="code" href="structTestArray.html#124f30bfd7953f357bce200304b0fc34">00234</a>         <span class="keywordtype">void</span> <a class="code" href="structTestArray.html#124f30bfd7953f357bce200304b0fc34">test_assignment</a>(){
-<a name="l00235"></a>00235                         <span class="keywordtype">int</span> a[] = { 1, 2, 3, 4, 5 };
-<a name="l00236"></a>00236                         <span class="keywordtype">int</span> b[] = { 2, 2, 2, 2, 2 };
-<a name="l00237"></a>00237                         <a class="code" href="classMy_1_1Array.html">My::Array&lt;int, 5&gt;</a> x(a, a+5);
-<a name="l00238"></a>00238                         <a class="code" href="classMy_1_1Array.html">My::Array&lt;int, 5&gt;</a> y(b, b+5);
-<a name="l00239"></a>00239                         <a class="code" href="classMy_1_1Array.html">My::Array&lt;int, 5&gt;</a> z(b, b+5);
-<a name="l00240"></a>00240                         CPPUNIT_ASSERT(x != y);
-<a name="l00241"></a>00241                         y = x;
-<a name="l00242"></a>00242                         CPPUNIT_ASSERT(x == y);
-<a name="l00243"></a>00243                         x = z;
-<a name="l00244"></a>00244                         y = z;
-<a name="l00245"></a>00245                         CPPUNIT_ASSERT(x == y);
-<a name="l00246"></a>00246                         CPPUNIT_ASSERT(x == z);
-<a name="l00247"></a>00247                         CPPUNIT_ASSERT(y == z);
-<a name="l00248"></a>00248                 }
-<a name="l00249"></a>00249                 
-<a name="l00250"></a><a class="code" href="structTestArray.html#d589d96f020e059e01c9af67f95646ea">00250</a>                 <span class="keywordtype">void</span> <a class="code" href="structTestArray.html#d589d96f020e059e01c9af67f95646ea">test_copy</a>(){
-<a name="l00251"></a>00251                         <span class="keywordtype">int</span> a[] = { 1, 2, 3, 4, 5 };
-<a name="l00252"></a>00252                         
-<a name="l00253"></a>00253                         <a class="code" href="classMy_1_1Array.html">My::Array&lt;int, 5&gt;</a> x(a, a+5);
-<a name="l00254"></a>00254                         <a class="code" href="classMy_1_1Array.html">My::Array&lt;int, 5&gt;</a> y(x);
-<a name="l00255"></a>00255                         CPPUNIT_ASSERT(x == y);
-<a name="l00256"></a>00256                 }
-<a name="l00257"></a>00257 
-<a name="l00258"></a>00258      <span class="comment">// -----</span>
-<a name="l00259"></a>00259     <span class="comment">// suite</span>
-<a name="l00260"></a>00260     <span class="comment">// -----</span>
-<a name="l00261"></a>00261 
-<a name="l00262"></a>00262     <a class="code" href="structTestArray.html#ddb553012c33bc1e2395c155e3b25844">CPPUNIT_TEST_SUITE</a>(<a class="code" href="structTestArray.html">TestArray</a>);
-<a name="l00263"></a>00263     
-<a name="l00264"></a>00264     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#da58660f7a4ebec92754a81dfe391b8e">test_constructor0</a>);
-<a name="l00265"></a>00265     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#99aa6ddd55516c5bdb51d1322c04d1ed">test_constructor1</a>);
-<a name="l00266"></a>00266     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#26b90c4ce8e1132964b54d5d31152fff">test_constructorSeq1</a>);
-<a name="l00267"></a>00267     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#831029ad7523c3afc3fc9b4cb44e8b02">test_constructorSeq2</a>);
-<a name="l00268"></a>00268     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#9201ff67d3decd2d8e55934c3583d7b3">test_size1</a>);
-<a name="l00269"></a>00269     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#2ef12144e7d8bb769a8090da0ee0f3de">test_size2</a>);
-<a name="l00270"></a>00270     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#104c946f7991934c6429971c143c6e2b">test_equal1</a>);
-<a name="l00271"></a>00271     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#a6207902627efb1d25ebfb2893089e1e">test_equal2</a>);
-<a name="l00272"></a>00272     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#4857ef46fab39c962008ca2a9a570ebe">test_not_equal</a>);
-<a name="l00273"></a>00273     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#c567695c62fb93ad313909e593a8bb5c">test_LTE_GTE</a>);
-<a name="l00274"></a>00274     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#7ec0e3a517bc0cfcb47b1b6197120412">test_LT_GT</a>);
-<a name="l00275"></a>00275     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#efbf804456695f9827b1d623da9c54c7">test_sub2</a>);
-<a name="l00276"></a>00276     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#c2a0016a0a5b69fb4e7c97525e5c7928">test_sub_const</a>);
-<a name="l00277"></a>00277     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#34ec5cc71c7ba05146749b8790c44540">test_at</a>);
-<a name="l00278"></a>00278     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#9d1e5f85b3fb176b23fa19c4ba6d1714">test_at1</a>);
-<a name="l00279"></a>00279     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#ed7e73a3b7d1ad16358290cc1e038588">test_at_const</a>);
-<a name="l00280"></a>00280     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#16955964453bd5fe661a4e029ebd9570">test_iterators</a>);
-<a name="l00281"></a>00281     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#124f30bfd7953f357bce200304b0fc34">test_assignment</a>);
-<a name="l00282"></a>00282     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#d589d96f020e059e01c9af67f95646ea">test_copy</a>);
-<a name="l00283"></a>00283     
-<a name="l00284"></a>00284     <a class="code" href="structTestArray.html#37bf1b0bf072e86b9d9b71d91a4bd070">CPPUNIT_TEST_SUITE_END</a>();};
-<a name="l00285"></a>00285 
-<a name="l00286"></a>00286 <span class="preprocessor">#endif // TestArray_h</span>
-<a name="l00287"></a>00287 <span class="preprocessor"></span> 
-</pre></div><hr size="1"><address style="align: right;"><small>Generated on Sun Jul 19 17:12:16 2009 by&nbsp;
+<a name="l00232"></a>00232                 }
+<a name="l00233"></a><a class="code" href="structTestArray.html#0572399d9229f88e3c48ba38b74395f2">00233</a>                 <span class="keywordtype">void</span> <a class="code" href="structTestArray.html#0572399d9229f88e3c48ba38b74395f2">test_iterators1</a>() {
+<a name="l00234"></a>00234                         <span class="keywordtype">int</span> a[] = {9, 8, 7, 6, 5, 4, 3, 2, 1 };
+<a name="l00235"></a>00235                         <a class="code" href="classMy_1_1Array.html">My::Array&lt;int,5&gt;</a> x(a, a+9);
+<a name="l00236"></a>00236                         CPPUNIT_ASSERT(<a class="code" href="structTestArray.html#99970693418222d9e66d9e802da870a8">iteratorHelper</a>(x.<a class="code" href="classMy_1_1Array.html#8efbe6bddad5ea3a30615d731bd6edf7">begin</a>(), x.<a class="code" href="classMy_1_1Array.html#381882248d69a975e601e347fa3a39dc">end</a>(), a));
+<a name="l00237"></a>00237 
+<a name="l00238"></a>00238         }
+<a name="l00239"></a><a class="code" href="structTestArray.html#124f30bfd7953f357bce200304b0fc34">00239</a>         <span class="keywordtype">void</span> <a class="code" href="structTestArray.html#124f30bfd7953f357bce200304b0fc34">test_assignment</a>(){
+<a name="l00240"></a>00240                         <span class="keywordtype">int</span> a[] = { 1, 2, 3, 4, 5 };
+<a name="l00241"></a>00241                         <span class="keywordtype">int</span> b[] = { 2, 2, 2, 2, 2 };
+<a name="l00242"></a>00242                         <a class="code" href="classMy_1_1Array.html">My::Array&lt;int, 5&gt;</a> x(a, a+5);
+<a name="l00243"></a>00243                         <a class="code" href="classMy_1_1Array.html">My::Array&lt;int, 5&gt;</a> y(b, b+5);
+<a name="l00244"></a>00244                         <a class="code" href="classMy_1_1Array.html">My::Array&lt;int, 5&gt;</a> z(b, b+5);
+<a name="l00245"></a>00245                         CPPUNIT_ASSERT(x != y);
+<a name="l00246"></a>00246                         y = x;
+<a name="l00247"></a>00247                         CPPUNIT_ASSERT(x == y);
+<a name="l00248"></a>00248                         x = z;
+<a name="l00249"></a>00249                         y = z;
+<a name="l00250"></a>00250                         CPPUNIT_ASSERT(x == y);
+<a name="l00251"></a>00251                         CPPUNIT_ASSERT(x == z);
+<a name="l00252"></a>00252                         CPPUNIT_ASSERT(y == z);
+<a name="l00253"></a>00253                 }
+<a name="l00254"></a>00254                 
+<a name="l00255"></a><a class="code" href="structTestArray.html#d589d96f020e059e01c9af67f95646ea">00255</a>                 <span class="keywordtype">void</span> <a class="code" href="structTestArray.html#d589d96f020e059e01c9af67f95646ea">test_copy</a>(){
+<a name="l00256"></a>00256                         <span class="keywordtype">int</span> a[] = { 1, 2, 3, 4, 5 };
+<a name="l00257"></a>00257                         
+<a name="l00258"></a>00258                         <a class="code" href="classMy_1_1Array.html">My::Array&lt;int, 5&gt;</a> x(a, a+5);
+<a name="l00259"></a>00259                         <a class="code" href="classMy_1_1Array.html">My::Array&lt;int, 5&gt;</a> y(x);
+<a name="l00260"></a>00260                         CPPUNIT_ASSERT(x == y);
+<a name="l00261"></a>00261                 }
+<a name="l00262"></a><a class="code" href="structTestArray.html#a9ad6abe6455a7b35f6c0633659c692d">00262</a>         <span class="keywordtype">void</span> <a class="code" href="structTestArray.html#a9ad6abe6455a7b35f6c0633659c692d">test_copy1</a>(){
+<a name="l00263"></a>00263                         <span class="keywordtype">int</span> a[] = { 5, 4, 3, 2, 1 };
+<a name="l00264"></a>00264                         
+<a name="l00265"></a>00265                         <a class="code" href="classMy_1_1Array.html">My::Array&lt;int, 5&gt;</a> x(a, a+5);
+<a name="l00266"></a>00266                         <a class="code" href="classMy_1_1Array.html">My::Array&lt;int, 5&gt;</a> y(x);
+<a name="l00267"></a>00267                         CPPUNIT_ASSERT(x == y);
+<a name="l00268"></a>00268                 }
+<a name="l00269"></a>00269 
+<a name="l00270"></a>00270      <span class="comment">// -----</span>
+<a name="l00271"></a>00271     <span class="comment">// suite</span>
+<a name="l00272"></a>00272     <span class="comment">// -----</span>
+<a name="l00273"></a>00273 
+<a name="l00274"></a>00274     <a class="code" href="structTestArray.html#ddb553012c33bc1e2395c155e3b25844">CPPUNIT_TEST_SUITE</a>(<a class="code" href="structTestArray.html">TestArray</a>);
+<a name="l00275"></a>00275     
+<a name="l00276"></a>00276     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#da58660f7a4ebec92754a81dfe391b8e">test_constructor0</a>);
+<a name="l00277"></a>00277     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#99aa6ddd55516c5bdb51d1322c04d1ed">test_constructor1</a>);
+<a name="l00278"></a>00278     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#26b90c4ce8e1132964b54d5d31152fff">test_constructorSeq1</a>);
+<a name="l00279"></a>00279     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#831029ad7523c3afc3fc9b4cb44e8b02">test_constructorSeq2</a>);
+<a name="l00280"></a>00280     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#9201ff67d3decd2d8e55934c3583d7b3">test_size1</a>);
+<a name="l00281"></a>00281     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#2ef12144e7d8bb769a8090da0ee0f3de">test_size2</a>);
+<a name="l00282"></a>00282     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#104c946f7991934c6429971c143c6e2b">test_equal1</a>);
+<a name="l00283"></a>00283     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#a6207902627efb1d25ebfb2893089e1e">test_equal2</a>);
+<a name="l00284"></a>00284     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#4857ef46fab39c962008ca2a9a570ebe">test_not_equal</a>);
+<a name="l00285"></a>00285     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#c567695c62fb93ad313909e593a8bb5c">test_LTE_GTE</a>);
+<a name="l00286"></a>00286     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#7ec0e3a517bc0cfcb47b1b6197120412">test_LT_GT</a>);
+<a name="l00287"></a>00287     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#efbf804456695f9827b1d623da9c54c7">test_sub2</a>);
+<a name="l00288"></a>00288     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#c2a0016a0a5b69fb4e7c97525e5c7928">test_sub_const</a>);
+<a name="l00289"></a>00289     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#34ec5cc71c7ba05146749b8790c44540">test_at</a>);
+<a name="l00290"></a>00290     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#9d1e5f85b3fb176b23fa19c4ba6d1714">test_at1</a>);
+<a name="l00291"></a>00291     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#ed7e73a3b7d1ad16358290cc1e038588">test_at_const</a>);
+<a name="l00292"></a>00292     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#16955964453bd5fe661a4e029ebd9570">test_iterators</a>);
+<a name="l00293"></a>00293     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#0572399d9229f88e3c48ba38b74395f2">test_iterators1</a>);
+<a name="l00294"></a>00294     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#124f30bfd7953f357bce200304b0fc34">test_assignment</a>);
+<a name="l00295"></a>00295     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#d589d96f020e059e01c9af67f95646ea">test_copy</a>);
+<a name="l00296"></a>00296     <a class="code" href="structTestArray.html#c47f598348beb8eacc51d9d1e776e58f">CPPUNIT_TEST</a>(<a class="code" href="structTestArray.html#a9ad6abe6455a7b35f6c0633659c692d">test_copy1</a>);
+<a name="l00297"></a>00297     
+<a name="l00298"></a>00298     <a class="code" href="structTestArray.html#37bf1b0bf072e86b9d9b71d91a4bd070">CPPUNIT_TEST_SUITE_END</a>();};
+<a name="l00299"></a>00299 
+<a name="l00300"></a>00300 <span class="preprocessor">#endif // TestArray_h</span>
+<a name="l00301"></a>00301 <span class="preprocessor"></span> 
+</pre></div><hr size="1"><address style="align: right;"><small>Generated on Sun Jul 19 17:33:50 2009 by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.4.7 </small></address>
 </body>
