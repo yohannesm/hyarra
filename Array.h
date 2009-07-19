@@ -156,7 +156,11 @@ class Array {
         // --
 
         /**
-         * <your documentation>
+         * a method to get the element of the Array at the specified index
+	 * this method is very similar to the subscript operator, but we
+	 * add in a check to check the bound of the Array object
+	 * @throw std::out of range if the boundary limitation is violated
+	 * @return returning a reference to the specified element
          */
         reference at (size_type i) {
             	if(i >= N || i < 0){
@@ -168,7 +172,11 @@ class Array {
             
 
         /**
-         * <your documentation>
+         * a method to get the element of the Array at the specified index
+	 * this method is very similar to the subscript operator, but we
+	 * add in a check to check the bound of the Array object
+	 * @throw std::out of range if the boundary limitation is violated
+	 * @return returning a constant reference to the specified element
          */
         const_reference at (size_type i) const {
             	if(i >= N || i < 0){
@@ -184,7 +192,7 @@ class Array {
         // -----
 
         /**
-         * <your documentation>
+         * returning an iterator to the beginning of the Array
          */
         iterator begin () {
             iterator i = a;
@@ -192,7 +200,7 @@ class Array {
             }
 
         /**
-         * <your documentation>
+         * returning a constant  iterator to the beginning of the Array
          */
         const_iterator begin () const {
             // you must call the non-const begin()
@@ -205,7 +213,7 @@ class Array {
         // ---
 
         /**
-         * <your documentation>
+         * returning an iterator to the end of the Array
          */
         iterator end () {
             iterator i = a + N;
@@ -213,7 +221,7 @@ class Array {
             }
 
         /**
-         * <your documentation>
+         * returning a constant iterator to the end of the Array
          */
         const_iterator end () const {
             // you must call the non-const end()
