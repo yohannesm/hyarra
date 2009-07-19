@@ -87,7 +87,7 @@ class Array {
         // ----------
         // operator <<
         // ----------
-#if 0
+/*
 	friend std::ostream operator << (std::ostream& os, const Array& rhs){
 		for(unsigned int i=0; i<rhs.size(); ++i){
 		   os << rhs[i] << " ";
@@ -95,7 +95,7 @@ class Array {
 		os << std::endl;
 		return os;
 	}
-#endif
+*/
     private:
         value_type a[N];
 
@@ -204,7 +204,7 @@ class Array {
          */
         const_iterator begin () const {
             // you must call the non-const begin()
-	    const_iterator i = *this.begin();
+	    const_iterator i = const_cast<Array&>(*this).begin();
 	    return i;
             }
 
@@ -225,7 +225,7 @@ class Array {
          */
         const_iterator end () const {
             // you must call the non-const end()
-	    const_iterator i = *this.end();
+	    const_iterator i = const_cast<Array&>(*this).end();
 	    return i;
             }
 

@@ -229,6 +229,11 @@ struct TestArray : CppUnit::TestFixture {
 			int a[] = { 1, 2, 3, 4, 5 };
 			My::Array<int,5> x(a, a+5);
 			CPPUNIT_ASSERT(iteratorHelper(x.begin(), x.end(), a));
+		}
+		void test_iterators1() {
+			int a[] = {9, 8, 7, 6, 5, 4, 3, 2, 1 };
+			My::Array<int,5> x(a, a+9);
+			CPPUNIT_ASSERT(iteratorHelper(x.begin(), x.end(), a));
 
 	}
 	void test_assignment(){
@@ -249,6 +254,13 @@ struct TestArray : CppUnit::TestFixture {
 		
 		void test_copy(){
 			int a[] = { 1, 2, 3, 4, 5 };
+			
+			My::Array<int, 5> x(a, a+5);
+			My::Array<int, 5> y(x);
+			CPPUNIT_ASSERT(x == y);
+		}
+	void test_copy1(){
+			int a[] = { 5, 4, 3, 2, 1 };
 			
 			My::Array<int, 5> x(a, a+5);
 			My::Array<int, 5> y(x);
@@ -278,8 +290,10 @@ struct TestArray : CppUnit::TestFixture {
     CPPUNIT_TEST(test_at1);
     CPPUNIT_TEST(test_at_const);
     CPPUNIT_TEST(test_iterators);
+    CPPUNIT_TEST(test_iterators1);
     CPPUNIT_TEST(test_assignment);
     CPPUNIT_TEST(test_copy);
+    CPPUNIT_TEST(test_copy1);
     
     CPPUNIT_TEST_SUITE_END();};
 
