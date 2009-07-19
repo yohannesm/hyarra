@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary The basic description and advantage of this Array class
 
 = Introduction =
 We implement an stack-allocated array object.
