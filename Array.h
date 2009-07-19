@@ -65,7 +65,7 @@ class Array {
          */
         friend bool operator == (const Array& lhs, const Array& rhs) {
             // you must use std::equal()
-	    return std::equal(lhs, lhs + lhs.size(), rhs);
+	    return std::equal(lhs.a, lhs.a + N, rhs.a );
             }
         
         // ----------
@@ -80,7 +80,7 @@ class Array {
             // <your code>
             // you must use std::lexicographical_compare()
 	    return std::lexicographical_compare(
-	    	lhs.begin(), lhs.end(), rhs.begin(), rhs.end()
+	    	lhs.a, lhs.a + N, rhs.a, rhs.a + N
 		);
             }
 
@@ -147,7 +147,7 @@ class Array {
          */
         const_reference operator [] (size_type i) const {
             // you must call the non-const operator[]()
-	     const_reference result = *this[i];
+	     const_reference result = const_cast<Array&>(*this).operator[](i);
 	     return result;
             }
 
@@ -174,7 +174,7 @@ class Array {
             	if(i >= N || i < 0){
 		    throw std::out_of_range("My::Array.at(i) >= size");
 	    		}
-		const_reference result =  *this.at(i);
+		const_reference result =  const_cast<Array&>(*this).at(i);
 		return result;
             // you must call the non-const at()
             }
