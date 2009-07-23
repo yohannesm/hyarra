@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
-<title>My::Array&lt; T, N &gt; Class Template Reference</title>
+<title>My::Array&lt; T, N, A &gt; Class Template Reference</title>
 <link href="doxygen.css" rel="stylesheet" type="text/css">
 <link href="tabs.css" rel="stylesheet" type="text/css">
 </head><body>
@@ -19,57 +19,61 @@
   </ul></div>
 <div class="nav">
 <a class="el" href="namespaceMy.html">My</a>::<a class="el" href="classMy_1_1Array.html">Array</a></div>
-<h1>My::Array&lt; T, N &gt; Class Template Reference</h1><!-- doxytag: class="My::Array" --><code>#include &lt;<a class="el" href="Array_8h-source.html">Array.h</a>&gt;</code>
+<h1>My::Array&lt; T, N, A &gt; Class Template Reference</h1><!-- doxytag: class="My::Array" --><code>#include &lt;<a class="el" href="Array_8h-source.html">Array.h</a>&gt;</code>
 <p>
 <a href="classMy_1_1Array-members.html">List of all members.</a><table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
 <tr><td colspan="2"><br><h2>Public Types</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef T&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#f2891de0471d11b4d1574becc711d70e">value_type</a></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef A&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#66e978615154fd71fac2363b3f2f5eec">allocator_type</a></td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef std::size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#adf2ce478133927c3acfa9e7dbf78165">size_type</a></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef T&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#e600f71fb60cac505dcddbe62a918655">value_type</a></td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef std::ptrdiff_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#6276ca34697d1820d25640b586fe4810">difference_type</a></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef std::size_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#b2b55b30f6c42ee1d800eccbb3781ce0">size_type</a></td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef <a class="el" href="classMy_1_1Array.html#f2891de0471d11b4d1574becc711d70e">value_type</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#201ccccecf81f54c3eb457cad917bcf6">pointer</a></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef std::ptrdiff_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#2c754b4e947921480d458b03dfc5cde4">difference_type</a></td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef const <a class="el" href="classMy_1_1Array.html#f2891de0471d11b4d1574becc711d70e">value_type</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#d6424241418f47b34a7820986876a8dd">const_pointer</a></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef <a class="el" href="classMy_1_1Array.html#e600f71fb60cac505dcddbe62a918655">value_type</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#5da1bbf3ca1be1dcfff571af93b627d9">pointer</a></td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef <a class="el" href="classMy_1_1Array.html#f2891de0471d11b4d1574becc711d70e">value_type</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#86c0c0eaf7b305c368892236bb348f4b">reference</a></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef const <a class="el" href="classMy_1_1Array.html#e600f71fb60cac505dcddbe62a918655">value_type</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#945bdea561c066ac7b8403320ef25455">const_pointer</a></td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef const <a class="el" href="classMy_1_1Array.html#f2891de0471d11b4d1574becc711d70e">value_type</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#5ed69fec6ccea9e536e22c9d077067c1">const_reference</a></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef <a class="el" href="classMy_1_1Array.html#e600f71fb60cac505dcddbe62a918655">value_type</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#270435b5001d9fb83d643a86c1ca2779">reference</a></td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef <a class="el" href="classMy_1_1Array.html#201ccccecf81f54c3eb457cad917bcf6">pointer</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#4d2b84d31e653a5dd88a841da15ffdfe">iterator</a></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef const <a class="el" href="classMy_1_1Array.html#e600f71fb60cac505dcddbe62a918655">value_type</a> &amp;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#42ff1f5209ee52f353185c9518332be3">const_reference</a></td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef <a class="el" href="classMy_1_1Array.html#d6424241418f47b34a7820986876a8dd">const_pointer</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#dd08ea4f929ff9b5a5a1236091b13f35">const_iterator</a></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef <a class="el" href="classMy_1_1Array.html#5da1bbf3ca1be1dcfff571af93b627d9">pointer</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#86e683bd161e671f08ca0d8e5929ae45">iterator</a></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">typedef <a class="el" href="classMy_1_1Array.html#945bdea561c066ac7b8403320ef25455">const_pointer</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#55921f9d084afd96ff457b5c97efea09">const_iterator</a></td></tr>
 
 <tr><td colspan="2"><br><h2>Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#f6c9335484aff91541ca3d9ee65a6cac">Array</a> (<a class="el" href="classMy_1_1Array.html#5ed69fec6ccea9e536e22c9d077067c1">const_reference</a> v=<a class="el" href="classMy_1_1Array.html#f2891de0471d11b4d1574becc711d70e">value_type</a>())</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#0f24360121f9eba40f8606d91002280b">Array</a> (<a class="el" href="classMy_1_1Array.html#42ff1f5209ee52f353185c9518332be3">const_reference</a> v=<a class="el" href="classMy_1_1Array.html#e600f71fb60cac505dcddbe62a918655">value_type</a>(), const <a class="el" href="classMy_1_1Array.html#66e978615154fd71fac2363b3f2f5eec">allocator_type</a> &amp;mlc=<a class="el" href="classMy_1_1Array.html#66e978615154fd71fac2363b3f2f5eec">allocator_type</a>())</td></tr>
 
 <tr><td class="memTemplParams" nowrap colspan="2">template&lt;typename II&gt; </td></tr>
-<tr><td class="memTemplItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#f855df101b321a3498303ff954155898">Array</a> (II b, II e)</td></tr>
+<tr><td class="memTemplItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#b51c5004dfabb8d4eddb32bfcb507317">Array</a> (II b, II e)</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classMy_1_1Array.html#86c0c0eaf7b305c368892236bb348f4b">reference</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#efc6e59a95c2744f08bf9e589adcd66c">operator[]</a> (<a class="el" href="classMy_1_1Array.html#adf2ce478133927c3acfa9e7dbf78165">size_type</a> i)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classMy_1_1Array.html#270435b5001d9fb83d643a86c1ca2779">reference</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#e8e6dd37b9497da43efce840a4052c87">operator[]</a> (<a class="el" href="classMy_1_1Array.html#b2b55b30f6c42ee1d800eccbb3781ce0">size_type</a> i)</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classMy_1_1Array.html#5ed69fec6ccea9e536e22c9d077067c1">const_reference</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#50692901c8934b9edc3870a8f8d2ae1e">operator[]</a> (<a class="el" href="classMy_1_1Array.html#adf2ce478133927c3acfa9e7dbf78165">size_type</a> i) const </td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classMy_1_1Array.html#42ff1f5209ee52f353185c9518332be3">const_reference</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#e36c047779ae4d04688f57089674ef26">operator[]</a> (<a class="el" href="classMy_1_1Array.html#b2b55b30f6c42ee1d800eccbb3781ce0">size_type</a> i) const </td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classMy_1_1Array.html#86c0c0eaf7b305c368892236bb348f4b">reference</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#7e595039f8e7c2da4176f23ff5749f8a">at</a> (<a class="el" href="classMy_1_1Array.html#adf2ce478133927c3acfa9e7dbf78165">size_type</a> i)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classMy_1_1Array.html#270435b5001d9fb83d643a86c1ca2779">reference</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#abca7b016d15e4f5ca40cd43f58ef2cb">at</a> (<a class="el" href="classMy_1_1Array.html#b2b55b30f6c42ee1d800eccbb3781ce0">size_type</a> i)</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classMy_1_1Array.html#5ed69fec6ccea9e536e22c9d077067c1">const_reference</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#4dcc20974868a49fdfec14edcd0adcef">at</a> (<a class="el" href="classMy_1_1Array.html#adf2ce478133927c3acfa9e7dbf78165">size_type</a> i) const </td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classMy_1_1Array.html#42ff1f5209ee52f353185c9518332be3">const_reference</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#6fc59873edb604615a1736eab1f33897">at</a> (<a class="el" href="classMy_1_1Array.html#b2b55b30f6c42ee1d800eccbb3781ce0">size_type</a> i) const </td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classMy_1_1Array.html#4d2b84d31e653a5dd88a841da15ffdfe">iterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#8efbe6bddad5ea3a30615d731bd6edf7">begin</a> ()</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classMy_1_1Array.html#86e683bd161e671f08ca0d8e5929ae45">iterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#8125351a93daa135349b72f92d73e716">begin</a> ()</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classMy_1_1Array.html#dd08ea4f929ff9b5a5a1236091b13f35">const_iterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#69f29e2e15fcb37ecf4bd0e09ed32dfe">begin</a> () const </td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classMy_1_1Array.html#55921f9d084afd96ff457b5c97efea09">const_iterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#54e4391c0512130cb009324cb3fa46d7">begin</a> () const </td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classMy_1_1Array.html#4d2b84d31e653a5dd88a841da15ffdfe">iterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#381882248d69a975e601e347fa3a39dc">end</a> ()</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classMy_1_1Array.html#86e683bd161e671f08ca0d8e5929ae45">iterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#5ee1d024048560cb31d337c96dbf0be0">end</a> ()</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classMy_1_1Array.html#dd08ea4f929ff9b5a5a1236091b13f35">const_iterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#52646b17f88fa1990225cf3294272fe1">end</a> () const </td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classMy_1_1Array.html#55921f9d084afd96ff457b5c97efea09">const_iterator</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#1c97588704f873b38b5623add262aa88">end</a> () const </td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classMy_1_1Array.html#adf2ce478133927c3acfa9e7dbf78165">size_type</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#04424819af03c90be566c2faeb0108e3">size</a> () const </td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classMy_1_1Array.html#b2b55b30f6c42ee1d800eccbb3781ce0">size_type</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#72c816c9b0942343351d02ee444875e1">size</a> () const </td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#f7a3a2ba13e9e874e08251bee6b55491">print</a> () const </td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#a5cba7c3b9ee9d3e200be62b33d2df17">print</a> () const </td></tr>
 
 <tr><td colspan="2"><br><h2>Private Attributes</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classMy_1_1Array.html#f2891de0471d11b4d1574becc711d70e">value_type</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#a0d6bdab4fb3cbbaf3537a2a34c6d8cd">a</a> [N]</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classMy_1_1Array.html#66e978615154fd71fac2363b3f2f5eec">allocator_type</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#dd05df12b9589118ac0ddef8289d86a6">malc</a></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classMy_1_1Array.html#e600f71fb60cac505dcddbe62a918655">value_type</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#f41c75e96a8d8379e84fad164e77bb02">a</a> [N]</td></tr>
 
 <tr><td colspan="2"><br><h2>Friends</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#5eac737578730879ef9b00151a600127">operator==</a> (const <a class="el" href="classMy_1_1Array.html">Array</a> &amp;lhs, const <a class="el" href="classMy_1_1Array.html">Array</a> &amp;rhs)</td></tr>
@@ -77,18 +81,18 @@
 <tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMy_1_1Array.html#63deeecf801827e4b05e0270e787fb37">operator&lt;</a> (const <a class="el" href="classMy_1_1Array.html">Array</a> &amp;lhs, const <a class="el" href="classMy_1_1Array.html">Array</a> &amp;rhs)</td></tr>
 
 </table>
-<h3>template&lt;typename T, std::size_t N&gt;<br>
- class My::Array&lt; T, N &gt;</h3>
+<h3>template&lt;typename T, std::size_t N, typename A = std::allocator&lt;T&gt;&gt;<br>
+ class My::Array&lt; T, N, A &gt;</h3>
 
 <hr><h2>Member Typedef Documentation</h2>
-<a class="anchor" name="dd08ea4f929ff9b5a5a1236091b13f35"></a><!-- doxytag: member="My::Array::const_iterator" ref="dd08ea4f929ff9b5a5a1236091b13f35" args="" -->
+<a class="anchor" name="66e978615154fd71fac2363b3f2f5eec"></a><!-- doxytag: member="My::Array::allocator_type" ref="66e978615154fd71fac2363b3f2f5eec" args="" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, std::size_t N&gt; </div>
+template&lt;typename T, std::size_t N, typename A = std::allocator&lt;T&gt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classMy_1_1Array.html#d6424241418f47b34a7820986876a8dd">const_pointer</a> <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N &gt;::<a class="el" href="classMy_1_1Array.html#dd08ea4f929ff9b5a5a1236091b13f35">const_iterator</a>          </td>
+          <td class="memname">typedef A <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N, A &gt;::<a class="el" href="classMy_1_1Array.html#66e978615154fd71fac2363b3f2f5eec">allocator_type</a>          </td>
         </tr>
       </table>
 </div>
@@ -98,14 +102,14 @@ template&lt;typename T, std::size_t N&gt; </div>
 
 </div>
 </div><p>
-<a class="anchor" name="d6424241418f47b34a7820986876a8dd"></a><!-- doxytag: member="My::Array::const_pointer" ref="d6424241418f47b34a7820986876a8dd" args="" -->
+<a class="anchor" name="55921f9d084afd96ff457b5c97efea09"></a><!-- doxytag: member="My::Array::const_iterator" ref="55921f9d084afd96ff457b5c97efea09" args="" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, std::size_t N&gt; </div>
+template&lt;typename T, std::size_t N, typename A = std::allocator&lt;T&gt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef const <a class="el" href="classMy_1_1Array.html#f2891de0471d11b4d1574becc711d70e">value_type</a>* <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N &gt;::<a class="el" href="classMy_1_1Array.html#d6424241418f47b34a7820986876a8dd">const_pointer</a>          </td>
+          <td class="memname">typedef <a class="el" href="classMy_1_1Array.html#945bdea561c066ac7b8403320ef25455">const_pointer</a> <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N, A &gt;::<a class="el" href="classMy_1_1Array.html#55921f9d084afd96ff457b5c97efea09">const_iterator</a>          </td>
         </tr>
       </table>
 </div>
@@ -115,14 +119,14 @@ template&lt;typename T, std::size_t N&gt; </div>
 
 </div>
 </div><p>
-<a class="anchor" name="5ed69fec6ccea9e536e22c9d077067c1"></a><!-- doxytag: member="My::Array::const_reference" ref="5ed69fec6ccea9e536e22c9d077067c1" args="" -->
+<a class="anchor" name="945bdea561c066ac7b8403320ef25455"></a><!-- doxytag: member="My::Array::const_pointer" ref="945bdea561c066ac7b8403320ef25455" args="" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, std::size_t N&gt; </div>
+template&lt;typename T, std::size_t N, typename A = std::allocator&lt;T&gt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef const <a class="el" href="classMy_1_1Array.html#f2891de0471d11b4d1574becc711d70e">value_type</a>&amp; <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N &gt;::<a class="el" href="classMy_1_1Array.html#5ed69fec6ccea9e536e22c9d077067c1">const_reference</a>          </td>
+          <td class="memname">typedef const <a class="el" href="classMy_1_1Array.html#e600f71fb60cac505dcddbe62a918655">value_type</a>* <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N, A &gt;::<a class="el" href="classMy_1_1Array.html#945bdea561c066ac7b8403320ef25455">const_pointer</a>          </td>
         </tr>
       </table>
 </div>
@@ -132,14 +136,14 @@ template&lt;typename T, std::size_t N&gt; </div>
 
 </div>
 </div><p>
-<a class="anchor" name="6276ca34697d1820d25640b586fe4810"></a><!-- doxytag: member="My::Array::difference_type" ref="6276ca34697d1820d25640b586fe4810" args="" -->
+<a class="anchor" name="42ff1f5209ee52f353185c9518332be3"></a><!-- doxytag: member="My::Array::const_reference" ref="42ff1f5209ee52f353185c9518332be3" args="" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, std::size_t N&gt; </div>
+template&lt;typename T, std::size_t N, typename A = std::allocator&lt;T&gt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::ptrdiff_t <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N &gt;::<a class="el" href="classMy_1_1Array.html#6276ca34697d1820d25640b586fe4810">difference_type</a>          </td>
+          <td class="memname">typedef const <a class="el" href="classMy_1_1Array.html#e600f71fb60cac505dcddbe62a918655">value_type</a>&amp; <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N, A &gt;::<a class="el" href="classMy_1_1Array.html#42ff1f5209ee52f353185c9518332be3">const_reference</a>          </td>
         </tr>
       </table>
 </div>
@@ -149,14 +153,14 @@ template&lt;typename T, std::size_t N&gt; </div>
 
 </div>
 </div><p>
-<a class="anchor" name="4d2b84d31e653a5dd88a841da15ffdfe"></a><!-- doxytag: member="My::Array::iterator" ref="4d2b84d31e653a5dd88a841da15ffdfe" args="" -->
+<a class="anchor" name="2c754b4e947921480d458b03dfc5cde4"></a><!-- doxytag: member="My::Array::difference_type" ref="2c754b4e947921480d458b03dfc5cde4" args="" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, std::size_t N&gt; </div>
+template&lt;typename T, std::size_t N, typename A = std::allocator&lt;T&gt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classMy_1_1Array.html#201ccccecf81f54c3eb457cad917bcf6">pointer</a> <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N &gt;::<a class="el" href="classMy_1_1Array.html#4d2b84d31e653a5dd88a841da15ffdfe">iterator</a>          </td>
+          <td class="memname">typedef std::ptrdiff_t <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N, A &gt;::<a class="el" href="classMy_1_1Array.html#2c754b4e947921480d458b03dfc5cde4">difference_type</a>          </td>
         </tr>
       </table>
 </div>
@@ -166,14 +170,14 @@ template&lt;typename T, std::size_t N&gt; </div>
 
 </div>
 </div><p>
-<a class="anchor" name="201ccccecf81f54c3eb457cad917bcf6"></a><!-- doxytag: member="My::Array::pointer" ref="201ccccecf81f54c3eb457cad917bcf6" args="" -->
+<a class="anchor" name="86e683bd161e671f08ca0d8e5929ae45"></a><!-- doxytag: member="My::Array::iterator" ref="86e683bd161e671f08ca0d8e5929ae45" args="" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, std::size_t N&gt; </div>
+template&lt;typename T, std::size_t N, typename A = std::allocator&lt;T&gt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classMy_1_1Array.html#f2891de0471d11b4d1574becc711d70e">value_type</a>* <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N &gt;::<a class="el" href="classMy_1_1Array.html#201ccccecf81f54c3eb457cad917bcf6">pointer</a>          </td>
+          <td class="memname">typedef <a class="el" href="classMy_1_1Array.html#5da1bbf3ca1be1dcfff571af93b627d9">pointer</a> <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N, A &gt;::<a class="el" href="classMy_1_1Array.html#86e683bd161e671f08ca0d8e5929ae45">iterator</a>          </td>
         </tr>
       </table>
 </div>
@@ -183,14 +187,14 @@ template&lt;typename T, std::size_t N&gt; </div>
 
 </div>
 </div><p>
-<a class="anchor" name="86c0c0eaf7b305c368892236bb348f4b"></a><!-- doxytag: member="My::Array::reference" ref="86c0c0eaf7b305c368892236bb348f4b" args="" -->
+<a class="anchor" name="5da1bbf3ca1be1dcfff571af93b627d9"></a><!-- doxytag: member="My::Array::pointer" ref="5da1bbf3ca1be1dcfff571af93b627d9" args="" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, std::size_t N&gt; </div>
+template&lt;typename T, std::size_t N, typename A = std::allocator&lt;T&gt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="classMy_1_1Array.html#f2891de0471d11b4d1574becc711d70e">value_type</a>&amp; <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N &gt;::<a class="el" href="classMy_1_1Array.html#86c0c0eaf7b305c368892236bb348f4b">reference</a>          </td>
+          <td class="memname">typedef <a class="el" href="classMy_1_1Array.html#e600f71fb60cac505dcddbe62a918655">value_type</a>* <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N, A &gt;::<a class="el" href="classMy_1_1Array.html#5da1bbf3ca1be1dcfff571af93b627d9">pointer</a>          </td>
         </tr>
       </table>
 </div>
@@ -200,14 +204,14 @@ template&lt;typename T, std::size_t N&gt; </div>
 
 </div>
 </div><p>
-<a class="anchor" name="adf2ce478133927c3acfa9e7dbf78165"></a><!-- doxytag: member="My::Array::size_type" ref="adf2ce478133927c3acfa9e7dbf78165" args="" -->
+<a class="anchor" name="270435b5001d9fb83d643a86c1ca2779"></a><!-- doxytag: member="My::Array::reference" ref="270435b5001d9fb83d643a86c1ca2779" args="" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, std::size_t N&gt; </div>
+template&lt;typename T, std::size_t N, typename A = std::allocator&lt;T&gt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::size_t <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N &gt;::<a class="el" href="classMy_1_1Array.html#adf2ce478133927c3acfa9e7dbf78165">size_type</a>          </td>
+          <td class="memname">typedef <a class="el" href="classMy_1_1Array.html#e600f71fb60cac505dcddbe62a918655">value_type</a>&amp; <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N, A &gt;::<a class="el" href="classMy_1_1Array.html#270435b5001d9fb83d643a86c1ca2779">reference</a>          </td>
         </tr>
       </table>
 </div>
@@ -217,14 +221,31 @@ template&lt;typename T, std::size_t N&gt; </div>
 
 </div>
 </div><p>
-<a class="anchor" name="f2891de0471d11b4d1574becc711d70e"></a><!-- doxytag: member="My::Array::value_type" ref="f2891de0471d11b4d1574becc711d70e" args="" -->
+<a class="anchor" name="b2b55b30f6c42ee1d800eccbb3781ce0"></a><!-- doxytag: member="My::Array::size_type" ref="b2b55b30f6c42ee1d800eccbb3781ce0" args="" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, std::size_t N&gt; </div>
+template&lt;typename T, std::size_t N, typename A = std::allocator&lt;T&gt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef T <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N &gt;::<a class="el" href="classMy_1_1Array.html#f2891de0471d11b4d1574becc711d70e">value_type</a>          </td>
+          <td class="memname">typedef std::size_t <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N, A &gt;::<a class="el" href="classMy_1_1Array.html#b2b55b30f6c42ee1d800eccbb3781ce0">size_type</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="e600f71fb60cac505dcddbe62a918655"></a><!-- doxytag: member="My::Array::value_type" ref="e600f71fb60cac505dcddbe62a918655" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, std::size_t N, typename A = std::allocator&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef T <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N, A &gt;::<a class="el" href="classMy_1_1Array.html#e600f71fb60cac505dcddbe62a918655">value_type</a>          </td>
         </tr>
       </table>
 </div>
@@ -235,19 +256,28 @@ template&lt;typename T, std::size_t N&gt; </div>
 </div>
 </div><p>
 <hr><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" name="f6c9335484aff91541ca3d9ee65a6cac"></a><!-- doxytag: member="My::Array::Array" ref="f6c9335484aff91541ca3d9ee65a6cac" args="(const_reference v=value_type())" -->
+<a class="anchor" name="0f24360121f9eba40f8606d91002280b"></a><!-- doxytag: member="My::Array::Array" ref="0f24360121f9eba40f8606d91002280b" args="(const_reference v=value_type(), const allocator_type &amp;mlc=allocator_type())" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, std::size_t N&gt; </div>
+template&lt;typename T, std::size_t N, typename A = std::allocator&lt;T&gt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N &gt;::<a class="el" href="classMy_1_1Array.html">Array</a>           </td>
+          <td class="memname"><a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N, A &gt;::<a class="el" href="classMy_1_1Array.html">Array</a>           </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classMy_1_1Array.html#5ed69fec6ccea9e536e22c9d077067c1">const_reference</a>&nbsp;</td>
-          <td class="paramname"> <em>v</em> = <code><a class="el" href="classMy_1_1Array.html#f2891de0471d11b4d1574becc711d70e">value_type</a>()</code>          </td>
-          <td>&nbsp;)&nbsp;</td>
-          <td width="100%"><code> [inline, explicit]</code></td>
+          <td class="paramtype"><a class="el" href="classMy_1_1Array.html#42ff1f5209ee52f353185c9518332be3">const_reference</a>&nbsp;</td>
+          <td class="paramname"> <em>v</em> = <code><a class="el" href="classMy_1_1Array.html#e600f71fb60cac505dcddbe62a918655">value_type</a>()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classMy_1_1Array.html#66e978615154fd71fac2363b3f2f5eec">allocator_type</a> &amp;&nbsp;</td>
+          <td class="paramname"> <em>mlc</em> = <code><a class="el" href="classMy_1_1Array.html#66e978615154fd71fac2363b3f2f5eec">allocator_type</a>()</code></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"><code> [inline, explicit]</code></td>
         </tr>
       </table>
 </div>
@@ -257,16 +287,16 @@ template&lt;typename T, std::size_t N&gt; </div>
 initialize the array of size N with N element 
 </div>
 </div><p>
-<a class="anchor" name="f855df101b321a3498303ff954155898"></a><!-- doxytag: member="My::Array::Array" ref="f855df101b321a3498303ff954155898" args="(II b, II e)" -->
+<a class="anchor" name="b51c5004dfabb8d4eddb32bfcb507317"></a><!-- doxytag: member="My::Array::Array" ref="b51c5004dfabb8d4eddb32bfcb507317" args="(II b, II e)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, std::size_t N&gt; </div>
+template&lt;typename T, std::size_t N, typename A = std::allocator&lt;T&gt;&gt; </div>
 <div class="memtemplate">
 template&lt;typename II&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N &gt;::<a class="el" href="classMy_1_1Array.html">Array</a>           </td>
+          <td class="memname"><a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N, A &gt;::<a class="el" href="classMy_1_1Array.html">Array</a>           </td>
           <td>(</td>
           <td class="paramtype">II&nbsp;</td>
           <td class="paramname"> <em>b</em>, </td>
@@ -291,16 +321,16 @@ Constructing the array by using some sequences from an Input Iterator
 </div>
 </div><p>
 <hr><h2>Member Function Documentation</h2>
-<a class="anchor" name="4dcc20974868a49fdfec14edcd0adcef"></a><!-- doxytag: member="My::Array::at" ref="4dcc20974868a49fdfec14edcd0adcef" args="(size_type i) const " -->
+<a class="anchor" name="6fc59873edb604615a1736eab1f33897"></a><!-- doxytag: member="My::Array::at" ref="6fc59873edb604615a1736eab1f33897" args="(size_type i) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, std::size_t N&gt; </div>
+template&lt;typename T, std::size_t N, typename A = std::allocator&lt;T&gt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classMy_1_1Array.html#5ed69fec6ccea9e536e22c9d077067c1">const_reference</a> <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N &gt;::at           </td>
+          <td class="memname"><a class="el" href="classMy_1_1Array.html#42ff1f5209ee52f353185c9518332be3">const_reference</a> <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N, A &gt;::at           </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classMy_1_1Array.html#adf2ce478133927c3acfa9e7dbf78165">size_type</a>&nbsp;</td>
+          <td class="paramtype"><a class="el" href="classMy_1_1Array.html#b2b55b30f6c42ee1d800eccbb3781ce0">size_type</a>&nbsp;</td>
           <td class="paramname"> <em>i</em>          </td>
           <td>&nbsp;)&nbsp;</td>
           <td width="100%"> const<code> [inline]</code></td>
@@ -319,16 +349,16 @@ a method to get the element of the <a class="el" href="classMy_1_1Array.html">Ar
 
 </div>
 </div><p>
-<a class="anchor" name="7e595039f8e7c2da4176f23ff5749f8a"></a><!-- doxytag: member="My::Array::at" ref="7e595039f8e7c2da4176f23ff5749f8a" args="(size_type i)" -->
+<a class="anchor" name="abca7b016d15e4f5ca40cd43f58ef2cb"></a><!-- doxytag: member="My::Array::at" ref="abca7b016d15e4f5ca40cd43f58ef2cb" args="(size_type i)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, std::size_t N&gt; </div>
+template&lt;typename T, std::size_t N, typename A = std::allocator&lt;T&gt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classMy_1_1Array.html#86c0c0eaf7b305c368892236bb348f4b">reference</a> <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N &gt;::at           </td>
+          <td class="memname"><a class="el" href="classMy_1_1Array.html#270435b5001d9fb83d643a86c1ca2779">reference</a> <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N, A &gt;::at           </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classMy_1_1Array.html#adf2ce478133927c3acfa9e7dbf78165">size_type</a>&nbsp;</td>
+          <td class="paramtype"><a class="el" href="classMy_1_1Array.html#b2b55b30f6c42ee1d800eccbb3781ce0">size_type</a>&nbsp;</td>
           <td class="paramname"> <em>i</em>          </td>
           <td>&nbsp;)&nbsp;</td>
           <td width="100%"><code> [inline]</code></td>
@@ -347,14 +377,14 @@ a method to get the element of the <a class="el" href="classMy_1_1Array.html">Ar
 
 </div>
 </div><p>
-<a class="anchor" name="69f29e2e15fcb37ecf4bd0e09ed32dfe"></a><!-- doxytag: member="My::Array::begin" ref="69f29e2e15fcb37ecf4bd0e09ed32dfe" args="() const " -->
+<a class="anchor" name="54e4391c0512130cb009324cb3fa46d7"></a><!-- doxytag: member="My::Array::begin" ref="54e4391c0512130cb009324cb3fa46d7" args="() const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, std::size_t N&gt; </div>
+template&lt;typename T, std::size_t N, typename A = std::allocator&lt;T&gt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classMy_1_1Array.html#dd08ea4f929ff9b5a5a1236091b13f35">const_iterator</a> <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N &gt;::begin           </td>
+          <td class="memname"><a class="el" href="classMy_1_1Array.html#55921f9d084afd96ff457b5c97efea09">const_iterator</a> <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N, A &gt;::begin           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
@@ -368,14 +398,14 @@ template&lt;typename T, std::size_t N&gt; </div>
 returning a constant iterator to the beginning of the <a class="el" href="classMy_1_1Array.html">Array</a> 
 </div>
 </div><p>
-<a class="anchor" name="8efbe6bddad5ea3a30615d731bd6edf7"></a><!-- doxytag: member="My::Array::begin" ref="8efbe6bddad5ea3a30615d731bd6edf7" args="()" -->
+<a class="anchor" name="8125351a93daa135349b72f92d73e716"></a><!-- doxytag: member="My::Array::begin" ref="8125351a93daa135349b72f92d73e716" args="()" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, std::size_t N&gt; </div>
+template&lt;typename T, std::size_t N, typename A = std::allocator&lt;T&gt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classMy_1_1Array.html#4d2b84d31e653a5dd88a841da15ffdfe">iterator</a> <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N &gt;::begin           </td>
+          <td class="memname"><a class="el" href="classMy_1_1Array.html#86e683bd161e671f08ca0d8e5929ae45">iterator</a> <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N, A &gt;::begin           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
@@ -389,14 +419,14 @@ template&lt;typename T, std::size_t N&gt; </div>
 returning an iterator to the beginning of the <a class="el" href="classMy_1_1Array.html">Array</a> 
 </div>
 </div><p>
-<a class="anchor" name="52646b17f88fa1990225cf3294272fe1"></a><!-- doxytag: member="My::Array::end" ref="52646b17f88fa1990225cf3294272fe1" args="() const " -->
+<a class="anchor" name="1c97588704f873b38b5623add262aa88"></a><!-- doxytag: member="My::Array::end" ref="1c97588704f873b38b5623add262aa88" args="() const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, std::size_t N&gt; </div>
+template&lt;typename T, std::size_t N, typename A = std::allocator&lt;T&gt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classMy_1_1Array.html#dd08ea4f929ff9b5a5a1236091b13f35">const_iterator</a> <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N &gt;::end           </td>
+          <td class="memname"><a class="el" href="classMy_1_1Array.html#55921f9d084afd96ff457b5c97efea09">const_iterator</a> <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N, A &gt;::end           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
@@ -410,14 +440,14 @@ template&lt;typename T, std::size_t N&gt; </div>
 returning a constant iterator to the end of the <a class="el" href="classMy_1_1Array.html">Array</a> 
 </div>
 </div><p>
-<a class="anchor" name="381882248d69a975e601e347fa3a39dc"></a><!-- doxytag: member="My::Array::end" ref="381882248d69a975e601e347fa3a39dc" args="()" -->
+<a class="anchor" name="5ee1d024048560cb31d337c96dbf0be0"></a><!-- doxytag: member="My::Array::end" ref="5ee1d024048560cb31d337c96dbf0be0" args="()" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, std::size_t N&gt; </div>
+template&lt;typename T, std::size_t N, typename A = std::allocator&lt;T&gt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classMy_1_1Array.html#4d2b84d31e653a5dd88a841da15ffdfe">iterator</a> <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N &gt;::end           </td>
+          <td class="memname"><a class="el" href="classMy_1_1Array.html#86e683bd161e671f08ca0d8e5929ae45">iterator</a> <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N, A &gt;::end           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
@@ -431,16 +461,16 @@ template&lt;typename T, std::size_t N&gt; </div>
 returning an iterator to the end of the <a class="el" href="classMy_1_1Array.html">Array</a> 
 </div>
 </div><p>
-<a class="anchor" name="50692901c8934b9edc3870a8f8d2ae1e"></a><!-- doxytag: member="My::Array::operator[]" ref="50692901c8934b9edc3870a8f8d2ae1e" args="(size_type i) const " -->
+<a class="anchor" name="e36c047779ae4d04688f57089674ef26"></a><!-- doxytag: member="My::Array::operator[]" ref="e36c047779ae4d04688f57089674ef26" args="(size_type i) const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, std::size_t N&gt; </div>
+template&lt;typename T, std::size_t N, typename A = std::allocator&lt;T&gt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classMy_1_1Array.html#5ed69fec6ccea9e536e22c9d077067c1">const_reference</a> <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N &gt;::operator[]           </td>
+          <td class="memname"><a class="el" href="classMy_1_1Array.html#42ff1f5209ee52f353185c9518332be3">const_reference</a> <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N, A &gt;::operator[]           </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classMy_1_1Array.html#adf2ce478133927c3acfa9e7dbf78165">size_type</a>&nbsp;</td>
+          <td class="paramtype"><a class="el" href="classMy_1_1Array.html#b2b55b30f6c42ee1d800eccbb3781ce0">size_type</a>&nbsp;</td>
           <td class="paramname"> <em>i</em>          </td>
           <td>&nbsp;)&nbsp;</td>
           <td width="100%"> const<code> [inline]</code></td>
@@ -453,16 +483,16 @@ template&lt;typename T, std::size_t N&gt; </div>
 getting a constant reference of an element inside the array container 
 </div>
 </div><p>
-<a class="anchor" name="efc6e59a95c2744f08bf9e589adcd66c"></a><!-- doxytag: member="My::Array::operator[]" ref="efc6e59a95c2744f08bf9e589adcd66c" args="(size_type i)" -->
+<a class="anchor" name="e8e6dd37b9497da43efce840a4052c87"></a><!-- doxytag: member="My::Array::operator[]" ref="e8e6dd37b9497da43efce840a4052c87" args="(size_type i)" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, std::size_t N&gt; </div>
+template&lt;typename T, std::size_t N, typename A = std::allocator&lt;T&gt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classMy_1_1Array.html#86c0c0eaf7b305c368892236bb348f4b">reference</a> <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N &gt;::operator[]           </td>
+          <td class="memname"><a class="el" href="classMy_1_1Array.html#270435b5001d9fb83d643a86c1ca2779">reference</a> <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N, A &gt;::operator[]           </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classMy_1_1Array.html#adf2ce478133927c3acfa9e7dbf78165">size_type</a>&nbsp;</td>
+          <td class="paramtype"><a class="el" href="classMy_1_1Array.html#b2b55b30f6c42ee1d800eccbb3781ce0">size_type</a>&nbsp;</td>
           <td class="paramname"> <em>i</em>          </td>
           <td>&nbsp;)&nbsp;</td>
           <td width="100%"><code> [inline]</code></td>
@@ -475,14 +505,14 @@ template&lt;typename T, std::size_t N&gt; </div>
 getting an element inside the array container 
 </div>
 </div><p>
-<a class="anchor" name="f7a3a2ba13e9e874e08251bee6b55491"></a><!-- doxytag: member="My::Array::print" ref="f7a3a2ba13e9e874e08251bee6b55491" args="() const " -->
+<a class="anchor" name="a5cba7c3b9ee9d3e200be62b33d2df17"></a><!-- doxytag: member="My::Array::print" ref="a5cba7c3b9ee9d3e200be62b33d2df17" args="() const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, std::size_t N&gt; </div>
+template&lt;typename T, std::size_t N, typename A = std::allocator&lt;T&gt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N &gt;::print           </td>
+          <td class="memname">void <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N, A &gt;::print           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
@@ -496,14 +526,14 @@ template&lt;typename T, std::size_t N&gt; </div>
 
 </div>
 </div><p>
-<a class="anchor" name="04424819af03c90be566c2faeb0108e3"></a><!-- doxytag: member="My::Array::size" ref="04424819af03c90be566c2faeb0108e3" args="() const " -->
+<a class="anchor" name="72c816c9b0942343351d02ee444875e1"></a><!-- doxytag: member="My::Array::size" ref="72c816c9b0942343351d02ee444875e1" args="() const " -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, std::size_t N&gt; </div>
+template&lt;typename T, std::size_t N, typename A = std::allocator&lt;T&gt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classMy_1_1Array.html#adf2ce478133927c3acfa9e7dbf78165">size_type</a> <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N &gt;::size           </td>
+          <td class="memname"><a class="el" href="classMy_1_1Array.html#b2b55b30f6c42ee1d800eccbb3781ce0">size_type</a> <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N, A &gt;::size           </td>
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
@@ -522,18 +552,18 @@ return the size of the stack allocated array
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, std::size_t N&gt; </div>
+template&lt;typename T, std::size_t N, typename A = std::allocator&lt;T&gt;&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">bool operator&lt;           </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classMy_1_1Array.html">Array</a>&lt; T, N &gt; &amp;&nbsp;</td>
+          <td class="paramtype">const <a class="el" href="classMy_1_1Array.html">Array</a>&lt; T, N, A &gt; &amp;&nbsp;</td>
           <td class="paramname"> <em>lhs</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classMy_1_1Array.html">Array</a>&lt; T, N &gt; &amp;&nbsp;</td>
+          <td class="paramtype">const <a class="el" href="classMy_1_1Array.html">Array</a>&lt; T, N, A &gt; &amp;&nbsp;</td>
           <td class="paramname"> <em>rhs</em></td><td>&nbsp;</td>
         </tr>
         <tr>
@@ -553,18 +583,18 @@ Determine whether lhs is lexicographically less than the rhs object O(N)
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, std::size_t N&gt; </div>
+template&lt;typename T, std::size_t N, typename A = std::allocator&lt;T&gt;&gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">bool operator==           </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classMy_1_1Array.html">Array</a>&lt; T, N &gt; &amp;&nbsp;</td>
+          <td class="paramtype">const <a class="el" href="classMy_1_1Array.html">Array</a>&lt; T, N, A &gt; &amp;&nbsp;</td>
           <td class="paramname"> <em>lhs</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="classMy_1_1Array.html">Array</a>&lt; T, N &gt; &amp;&nbsp;</td>
+          <td class="paramtype">const <a class="el" href="classMy_1_1Array.html">Array</a>&lt; T, N, A &gt; &amp;&nbsp;</td>
           <td class="paramname"> <em>rhs</em></td><td>&nbsp;</td>
         </tr>
         <tr>
@@ -581,14 +611,31 @@ Checking whether two <a class="el" href="classMy_1_1Array.html">Array</a> object
 </div>
 </div><p>
 <hr><h2>Member Data Documentation</h2>
-<a class="anchor" name="a0d6bdab4fb3cbbaf3537a2a34c6d8cd"></a><!-- doxytag: member="My::Array::a" ref="a0d6bdab4fb3cbbaf3537a2a34c6d8cd" args="[N]" -->
+<a class="anchor" name="f41c75e96a8d8379e84fad164e77bb02"></a><!-- doxytag: member="My::Array::a" ref="f41c75e96a8d8379e84fad164e77bb02" args="[N]" -->
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename T, std::size_t N&gt; </div>
+template&lt;typename T, std::size_t N, typename A = std::allocator&lt;T&gt;&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classMy_1_1Array.html#f2891de0471d11b4d1574becc711d70e">value_type</a> <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N &gt;::<a class="el" href="classMy_1_1Array.html#a0d6bdab4fb3cbbaf3537a2a34c6d8cd">a</a>[N]<code> [private]</code>          </td>
+          <td class="memname"><a class="el" href="classMy_1_1Array.html#e600f71fb60cac505dcddbe62a918655">value_type</a> <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N, A &gt;::<a class="el" href="classMy_1_1Array.html#f41c75e96a8d8379e84fad164e77bb02">a</a>[N]<code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="dd05df12b9589118ac0ddef8289d86a6"></a><!-- doxytag: member="My::Array::malc" ref="dd05df12b9589118ac0ddef8289d86a6" args="" -->
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T, std::size_t N, typename A = std::allocator&lt;T&gt;&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMy_1_1Array.html#66e978615154fd71fac2363b3f2f5eec">allocator_type</a> <a class="el" href="classMy_1_1Array.html">My::Array</a>&lt; T, N, A &gt;::<a class="el" href="classMy_1_1Array.html#dd05df12b9589118ac0ddef8289d86a6">malc</a><code> [private]</code>          </td>
         </tr>
       </table>
 </div>
@@ -600,7 +647,7 @@ template&lt;typename T, std::size_t N&gt; </div>
 </div><p>
 <hr>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="Array_8h-source.html">Array.h</a></ul>
-<hr size="1"><address style="align: right;"><small>Generated on Sun Jul 19 17:33:50 2009 by&nbsp;
+<hr size="1"><address style="align: right;"><small>Generated on Wed Jul 22 19:05:56 2009 by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.4.7 </small></address>
 </body>
